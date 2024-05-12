@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>MuscleHustle</title>
+  <link rel="stylesheet" type="text/css" href="account.css">
+</head>
+
+<body>
+<div class="topnav">
+  <a href="login_page.html"><img src="icons/account_icon.png" alt="Icon 1"></a>
+  <a href="catalog.html"><img src="icons/home_icon.png" alt="Icon 2"></a>
+  <a href="shopping_cart.html"><img src="icons/kosik.png" alt="Icon 3"></a>
+  <span id="cartCounter"
+  style="position: absolute; top: 35px; left: 160px; background-color: white; color: black; border-radius: 50%; padding: 4px 8px; font-size: 12px;"></span>
+</div>
+<h1>MuscleHustle account</h1>
+<div class="input-group-left">
+  <label class="label">Username:</label>
+  <input autocomplete="off" class="input" id="username">
+  <label class="label">Email:</label>
+  <input autocomplete="off" class="input" id="email">
+  <label class="label">State:</label>
+  <input autocomplete="off" class="input" id="state">
+  <label class="label">City:</label>
+  <input autocomplete="off" class="input" id="city">
+</div>
+<div class="input-group-right">
+  <label class="label">Street:</label>
+  <input autocomplete="off" class="input" id="street">
+  <label class="label">Phone number:</label>
+  <input autocomplete="off" class="input" id="phone">
+  <label class="label">Password:</label>
+  <input autocomplete="off" class="input" type="password" id="password">
+  <label class="label">Repeat Password:</label>
+  <input autocomplete="off" class="input" type="password" id="repeatPassword">
+</div>
+<button onclick="register()">Register</button>
+
+<!-- Success message -->
+<div class="success" style="display: none;">
+  <div class="success__icon">
+    <svg fill="none" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+      <!-- SVG path for success icon -->
+    </svg>
+  </div>
+  <div class="success__title" id="successMessage"></div>
+  <div class="success__close" onclick="closeSuccessMessage()">
+    <img src="icons/cross_icon.png" alt="Close" width="20px" height="20px">
+  </div>
+  <script src="account.js"></script
+</body>
+
+</html>

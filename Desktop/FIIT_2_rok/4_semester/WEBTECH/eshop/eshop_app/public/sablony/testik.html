@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Price Interval</title>
+  <!-- Include the noUiSlider CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.3/nouislider.min.css">
+  <style>
+    /* Styling for the slider container */
+    #slider-container {
+      margin: 20px;
+    }
+
+    /* Styling for the price labels */
+    #min-price, #max-price {
+      display: inline-block;
+      width: 50px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<div id="slider-container">
+  <label for="price-slider">Price Interval:</label>
+  <!-- Create an empty div for the slider -->
+  <div id="price-slider"></div>
+  <!-- Display labels for minimum and maximum prices -->
+  <span id="min-price">$10</span> - <span id="max-price">$20</span>
+</div>
+
+<!-- Include the noUiSlider library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.3/nouislider.min.js"></script>
+<script>
+  // Initialize the slider
+  const priceSlider = document.getElementById('price-slider');
+  const minPrice = document.getElementById('min-price');
+  const maxPrice = document.getElementById('max-price');
+
+  noUiSlider.create(priceSlider, {
+    start: [10, 20], // Initial values for minimum and maximum prices
+    connect: true, // Connect the two handles with a line
+    range: {
+      'min': 10,
+      'max': 50 // Adjust the maximum value as per your requirement
+    }
+  });
+
+  // Update the displayed prices when the slider values change
+  priceSlider.noUiSlider.on('update', function (values) {
+    minPrice.textContent = '$' + values[0];
+    maxPrice.textContent = '$' + values[1];
+  });
+</script>
+
+</body>
+</html>

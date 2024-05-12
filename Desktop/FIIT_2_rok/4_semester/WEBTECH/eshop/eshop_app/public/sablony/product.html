@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <link rel="stylesheet" type="text/css" href="product.css">
+    <link rel="stylesheet" type="text/css" href="cart_counter.css">
+</head>
+
+<body>
+    <div class="topnav">
+        <a href="login_page.html"><img src="icons/account_icon.png" alt="Icon 1"></a>
+        <a href="catalog.html"><img src="icons/home_icon.png" alt="Icon 2"></a>
+        <a href="shopping_cart.html"><img src="icons/kosik.png" alt="Icon 3"></a>
+        <span id="cartCounter"></span>
+    </div>
+
+    <div class="product-info">
+        <h2 id="productName">Product Name</h2>
+        <img class="product-image" id="productImage" alt="Product Image">
+        <p id="productDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eleifend fringilla
+            diam, non condimentum mi congue ut. Morbi vel felis quis est ultrices eleifend nec nec tellus. Nam ac
+            fringilla libero.</p>
+        <button onclick="addToCart()">Add to Cart</button>
+    </div>
+
+</body>
+<script src="product.js"></script>
+
+</html>

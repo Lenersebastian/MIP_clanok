@@ -20,8 +20,10 @@ class ProductSeeder extends Seeder
 
         // Generate fake data and insert into the products table
         for ($i = 0; $i < 10; $i++) {
+            $name = $faker->words($nb = 3, $asText = true); // Generate a string of maximum 3 words
+            $name = substr($name, 0, 255); // Limit the name to 255 characters
             Product::create([
-                'name' => $faker->word,
+                'name' => $name,
                 'description' => $faker->paragraph,
                 'price' => $faker->numberBetween(10, 100),
                 'category' => $faker->randomElement(['protein', 'kreatin']),
